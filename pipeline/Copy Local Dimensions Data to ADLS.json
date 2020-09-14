@@ -1,5 +1,5 @@
 {
-	"name": "Copy Local Dimensions Data",
+	"name": "Copy Local Dimensions Data to ADLS",
 	"properties": {
 		"activities": [
 			{
