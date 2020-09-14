@@ -1,0 +1,31 @@
+{
+	"name": "LocalDimensionsDAta",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LocalFileConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"folderPath": "Dimensions"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ChannelKey",
+				"type": "String"
+			},
+			{
+				"name": "ChannelName",
+				"type": "String"
+			}
+		]
+	}
+}
