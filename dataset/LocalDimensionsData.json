@@ -1,5 +1,5 @@
 {
-	"name": "LocalDimensionsDAta",
+	"name": "LocalDimensionsData",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LocalFileConnection",
