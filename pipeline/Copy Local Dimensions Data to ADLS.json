@@ -59,8 +59,8 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"type": "String",
-									"ordinal": 1
+									"name": "ChannelKey",
+									"type": "String"
 								}
 							},
 							{
@@ -70,8 +70,8 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"type": "String",
-									"ordinal": 2
+									"name": "ChannelName",
+									"type": "String"
 								}
 							}
 						],
