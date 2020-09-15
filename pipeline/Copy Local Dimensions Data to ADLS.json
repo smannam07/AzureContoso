@@ -19,8 +19,7 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "FileServerReadSettings",
-							"recursive": true,
-							"wildcardFileName": "*"
+							"recursive": true
 						},
 						"formatSettings": {
 							"type": "DelimitedTextReadSettings"
@@ -51,6 +50,30 @@
 					"dataIntegrationUnits": 2,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ChannelKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"ordinal": 1
+								}
+							},
+							{
+								"source": {
+									"name": "ChannelName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"type": "String",
+									"ordinal": 2
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,

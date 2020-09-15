@@ -1,0 +1,26 @@
+{
+	"name": "SynapseDWChannelDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SynapseDWConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "ChannelKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ChannelName",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DimChannel"
+		}
+	}
+}
