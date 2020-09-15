@@ -5,9 +5,9 @@
 		"annotations": [],
 		"type": "FileServer",
 		"typeProperties": {
-			"host": "C:\\Work\\Azure Contoso\\Data",
+			"host": "C:\\Work\\Azure Contoso\\Data\\Dimensions",
 			"userId": "smannam",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5YWFmZmRmMS1mM2YyLTRjOTYtYTg4Mi01MGNhMDgyYWQwZjYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjYWY1ZjdkOC00NjgyLTRiN2ItODFhYy04NTQ0MWRiZjUxMDUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "SelfHostedIR",
