@@ -1,0 +1,51 @@
+{
+	"name": "SynapseDWStoreDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SynapseDWConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "StoreKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StoreType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StoreName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CityName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StateProvinceName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RegionCountryName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ContinentName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EmployeeCount",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DimStore"
+		}
+	}
+}

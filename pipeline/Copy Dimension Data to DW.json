@@ -244,7 +244,14 @@
 			{
 				"name": "Copy Date Data from ADLS to DW",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Copy Product Data from ADLS to DW",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -275,8 +282,9 @@
 						"mappings": [
 							{
 								"source": {
+									"name": "DateKey",
 									"type": "String",
-									"ordinal": 1
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "DateKey",
@@ -286,8 +294,9 @@
 							},
 							{
 								"source": {
+									"name": "Year",
 									"type": "String",
-									"ordinal": 2
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "Year",
@@ -297,8 +306,9 @@
 							},
 							{
 								"source": {
+									"name": "QuarterLabel",
 									"type": "String",
-									"ordinal": 3
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "QuarterLabel",
@@ -308,8 +318,9 @@
 							},
 							{
 								"source": {
+									"name": "QuarterNumber",
 									"type": "String",
-									"ordinal": 4
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "QuarterNumer",
@@ -319,8 +330,9 @@
 							},
 							{
 								"source": {
+									"name": "MonthLabel",
 									"type": "String",
-									"ordinal": 5
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "MonthLabel",
@@ -330,8 +342,9 @@
 							},
 							{
 								"source": {
+									"name": "MonthNumber",
 									"type": "String",
-									"ordinal": 6
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "MonthNumber",
