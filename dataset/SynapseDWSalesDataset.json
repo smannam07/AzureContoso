@@ -1,0 +1,92 @@
+{
+	"name": "SynapseDWSalesDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SynapseDWConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "SalesKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DateKey",
+				"type": "date"
+			},
+			{
+				"name": "channelKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "StoreKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ProductKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "UnitCost",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "UnitPrice",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "SalesQuantity",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReturnQuantity",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ReturnAmount",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "DiscountQuantity",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DiscountAmount",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "TotalCost",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "SalesAmount",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "FactSales"
+		}
+	}
+}
