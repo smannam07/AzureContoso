@@ -277,6 +277,16 @@
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
+					"parallelCopies": 1,
+					"enableSkipIncompatibleRow": true,
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "ADFErrorsBlob",
+							"type": "LinkedServiceReference"
+						},
+						"path": "errors"
+					},
+					"dataIntegrationUnits": 2,
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
@@ -409,6 +419,15 @@
 						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "ADFErrorsBlob",
+							"type": "LinkedServiceReference"
+						},
+						"path": "errors"
+					},
+					"dataIntegrationUnits": 2,
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
