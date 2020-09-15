@@ -1,0 +1,44 @@
+{
+	"name": "SynapseDWDateDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SynapseDWConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "DateKey",
+				"type": "date"
+			},
+			{
+				"name": "Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "QuarterLabel",
+				"type": "varchar"
+			},
+			{
+				"name": "QuarterNumer",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "MonthLabel",
+				"type": "varchar"
+			},
+			{
+				"name": "MonthNumber",
+				"type": "tinyint",
+				"precision": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DimDate"
+		}
+	}
+}
