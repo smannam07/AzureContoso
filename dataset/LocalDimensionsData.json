@@ -17,15 +17,6 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "ChannelKey",
-				"type": "String"
-			},
-			{
-				"name": "ChannelName",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }
