@@ -50,30 +50,6 @@
 					"dataIntegrationUnits": 2,
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "ChannelKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "ChannelKey",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "ChannelName",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "ChannelName",
-									"type": "String"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
