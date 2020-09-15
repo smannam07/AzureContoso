@@ -372,6 +372,145 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Copy Store Data from ADLS to DW",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Copy Date Data from ADLS to DW",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "StoreKey",
+									"type": "String"
+								},
+								"sink": {
+									"name": "StoreKey",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "StoreType",
+									"type": "String"
+								},
+								"sink": {
+									"name": "StoreType",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StoreName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "StoreName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CityName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CityName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "StateProvinceName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "StateProvinceName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "RegionCountryName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "RegionCountryName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ContinentName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ContinentName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "EmployeeCount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EmployeeCount",
+									"type": "Int32"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ADLSStoreDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SynapseDWStoreDataset",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []
