@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "AzureContoso"
+		},
+		"ADFErrorsBlob_connectionString": {
+			"value": ""
+		},
+		"ADLSConnection_accountKey": {
+			"value": ""
+		},
+		"ContosoSalesConnection_accessToken": {
+			"value": ""
+		},
+		"LocalFileConnection_password": {
+			"value": ""
+		},
+		"SynapseDWConnection_connectionString": {
+			"value": ""
+		},
+		"ADLSConnection_properties_typeProperties_url": {
+			"value": "https://azurecontoso.dfs.core.windows.net"
+		},
+		"LocalFileConnection_properties_typeProperties_host": {
+			"value": "C:\\Work\\Azure Contoso\\Data\\Dimensions"
+		},
+		"LocalFileConnection_properties_typeProperties_userId": {
+			"value": "smannam"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
