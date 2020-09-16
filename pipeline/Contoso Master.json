@@ -56,7 +56,7 @@
 				}
 			},
 			{
-				"name": "Copy Date Data from ADLS to DW",
+				"name": "Copy Dimension Data from ADLS to DW",
 				"type": "ExecutePipeline",
 				"dependsOn": [
 					{
@@ -70,6 +70,26 @@
 				"typeProperties": {
 					"pipeline": {
 						"referenceName": "Copy Dimension Data to DW",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Copy Sales Data from ADLS to DW",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Copy Dimension Data from ADLS to DW",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Copy Sales Data to DW",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true
